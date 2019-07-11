@@ -10,6 +10,7 @@ public class ScaleWalk : MonoBehaviour
     public float SCALE_UP_MULT;
     private bool scaled = false;
     private float savedPosY;
+    public float Y_ADD;
     void Awake ()
     {
         area = GetComponent<SteamVR_PlayArea>();
@@ -27,6 +28,7 @@ public class ScaleWalk : MonoBehaviour
             savedPosY = area.transform.position.y;
             area.transform.localScale = Vector3.one * SCALE_UP_MULT;
             area.transform.position -= (SCALE_UP_MULT - 1) * camLocal;
+            area.transform.position += Vector3.up * Y_ADD;
         }
         else if (grabPinch.GetStateUp(SteamVR_Input_Sources.Any) && scaled)
         {
