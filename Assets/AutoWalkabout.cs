@@ -18,6 +18,13 @@ public class AutoWalkabout : MonoBehaviour {
     void Awake() {
         area = GetComponent<SteamVR_PlayArea>();
     }
+
+    // TODO test?
+    private void OnDisable()
+    {
+        flipped = false;
+        transform.localRotation = Quaternion.identity;
+    }
 	
     // Update is called once per frame
     void Update () {

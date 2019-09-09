@@ -27,6 +27,12 @@ GameObject:
   - component: {fileID: 2348914}
   - component: {fileID: 3380982}
   - component: {fileID: 11489174}
+  - component: {fileID: 114616746859780802}
+  - component: {fileID: 114093605852777980}
+  - component: {fileID: 114201658273594782}
+  - component: {fileID: 114389623919668102}
+  - component: {fileID: 114479382259640908}
+  - component: {fileID: 114486185267519788}
   m_Layer: 0
   m_Name: '[CameraRig]'
   m_TagString: Untagged
@@ -238,21 +244,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0522eaef74d984591c060d05a095c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  borderThickness: 0.15
-  wireframeHeight: 2
+  borderThickness: 0.68
+  wireframeHeight: 1.85
   drawWireframeWhenSelectedOnly: 0
   drawInGame: 0
-  size: 2
+  size: 0
   color: {r: 0, g: 1, b: 1, a: 1}
   vertices:
-  - {x: 1.5, y: 0.01, z: -1.125}
-  - {x: -1.5, y: 0.01, z: -1.125}
-  - {x: -1.5, y: 0.01, z: 1.125}
-  - {x: 1.5, y: 0.01, z: 1.125}
-  - {x: 1.65, y: 0.01, z: -1.275}
-  - {x: -1.65, y: 0.01, z: -1.275}
-  - {x: -1.65, y: 0.01, z: 1.275}
-  - {x: 1.65, y: 0.01, z: 1.275}
+  - {x: 1.2999998, y: 0.01, z: -0.9500002}
+  - {x: -1.2999998, y: 0.01, z: -0.9500002}
+  - {x: -1.2999998, y: 0.01, z: 0.9500002}
+  - {x: 1.2999998, y: 0.01, z: 0.9500002}
+  - {x: 1.9799998, y: 0.01, z: -1.6300002}
+  - {x: -1.9799998, y: 0.01, z: -1.6300002}
+  - {x: -1.9799998, y: 0.01, z: 1.6300002}
+  - {x: 1.9799998, y: 0.01, z: 1.6300002}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -274,6 +280,8 @@ GameObject:
   - component: {fileID: 4000013889601590}
   - component: {fileID: 20000014031267948}
   - component: {fileID: 81000013732730882}
+  - component: {fileID: 114056557090562240}
+  - component: {fileID: 114506732047475948}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -421,3 +429,127 @@ MonoBehaviour:
     m_TypeName: Valve.VR.SteamVR_Behaviour_Pose_DeviceIndexChangedEvent, SteamVR,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   broadcastDeviceChanges: 1
+--- !u!114 &114056557090562240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014254142504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad1e469d4e3e04489f9a36419f1a4f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114093605852777980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146900}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9def8d5bf692b57408392491e4ad114a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabPinch:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  TRIGGER_WALK_MULTIPLIER: 1
+  USE_FORWARD_VECTOR: 1
+--- !u!114 &114201658273594782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81649b78463d9b0428b5276169d1bd88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabPinch:
+    actionPath: 
+    needsReinit: 0
+  triggerSpeedThresh: 2
+  triggerWalkFactorSqr: 0.5
+  triggerSpeedCap: 4
+  USE_FORWARD_VECTOR: 0
+--- !u!114 &114389623919668102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146900}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541f2f9fdf3e18246b8d3768aeff4398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabPinch:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  FADE_TIME: 0.1
+--- !u!114 &114479382259640908
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146900}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d85cefa54955284ca544ecb3836fc64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabPinch:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  minTiltDist: 0.1
+  moveMult: 5
+  accelerate: 1
+  accelMult: 10
+  maxSpeed: 4
+--- !u!114 &114486185267519788
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146900}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28776bc39081e4b4ea9234e8575d222a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabPinch:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  SCALE_UP_MULT: 8
+  Y_ADD: 2
+--- !u!114 &114506732047475948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014254142504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _head: {fileID: 0}
+  _ears: {fileID: 0}
+  wireframe: 0
+--- !u!114 &114616746859780802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146900}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f229c610f8b92d7469016b51d0d66cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EDGE_THRESHOLD: 0.3
+  FADE_OUT_TIME: 0.1
+  FADE_IN_TIME: 0.1
+  TURN_DOT_THRESH: 0.8
